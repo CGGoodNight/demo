@@ -12,10 +12,10 @@ const AppRecommend = props => {
               <h2>电网调度</h2>
             </li>
             <li>
-              <h2>电网调度</h2>
+              <h2>智能运检</h2>
             </li>
             <li>
-              <h2>电网调度</h2>
+              <h2>智能供服</h2>
             </li>
           </ul>
           <AppItem />

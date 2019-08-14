@@ -3,13 +3,15 @@ import { Route, IndexRoute, hashHistory, Router } from "react-router";
 
 import Homepage from '../containers/Homepage';
 import ApplicationCenter from '../containers/ApplictionCenter';
+import Login from "../containers/Login";
 
 class RouteMap extends Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path="/" component={Homepage}>
-        </Route>
+        <Route path="/" component={Homepage}></Route>
+        <Route path="/appcenter" component = {ApplicationCenter}></Route>
+        <Route path="/login" component={Login}></Route>
       </Router>
     );
   }

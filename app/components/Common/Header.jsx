@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.less";
+import {hashHistory} from "react-router";
 import logo from "../../../static/image/png/guojiadianwanggongsi.png";
 
 const Footer = props => {
@@ -17,11 +18,11 @@ const Footer = props => {
           </div>
           <div className="header-right">
             <ul>
-              <li className="current"><p>首页</p></li>
-              <li><p>应用中心</p></li>
-              <li><p>开放平台</p></li>
-              <li><p>创客学院</p></li>
-              <li><p>登录</p></li>
+              <li onClick={() => {hashHistory.push("/")}} className={props.headerIndex === 1 ? "current" : ""}><p>首页</p></li>
+              <li onClick={() => {hashHistory.push("/appcenter")}} className={props.headerIndex === 2 ? "current" : ""}><p>应用中心</p></li>
+              <li className={props.headerIndex === 3 ? "current" : ""}><p>开放平台</p></li>
+              <li className={props.headerIndex === 4 ? "current" : ""}><p>创客学院</p></li>
+              <li onClick={() => {hashHistory.push("/login")}} className={props.headerIndex === 5 ? "current" : ""}><p>登录</p></li>
             </ul>
           </div>
         </div>
