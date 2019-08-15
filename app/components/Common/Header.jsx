@@ -22,7 +22,7 @@ const Footer = props => {
               <li onClick={() => {hashHistory.push("/appcenter")}} className={props.headerIndex === 2 ? "current" : ""}><p>应用中心</p></li>
               <li className={props.headerIndex === 3 ? "current" : ""}><p>开放平台</p></li>
               <li className={props.headerIndex === 4 ? "current" : ""}><p>创客学院</p></li>
-              <li onClick={() => {hashHistory.push("/login")}} className={props.headerIndex === 5 ? "current" : ""}><p>登录</p></li>
+              <li onClick={() => {hashHistory.push("/login")}} className={props.headerIndex === 5 ? "current" : ""}><p>控制台</p></li>
             </ul>
           </div>
         </div>

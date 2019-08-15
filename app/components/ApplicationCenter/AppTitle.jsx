@@ -10,7 +10,7 @@ const AppTitle = props => {
             <img src={classifyIcon} alt=""/>
           </div>
           <h2>
-            泛在微应用
+            {props.appRecommendTitle}
           </h2>
         </div>
       </div>
