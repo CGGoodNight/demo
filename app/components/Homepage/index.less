@@ -11,6 +11,8 @@
     position: absolute;
     right: 386px;
     top: 217px;
+    top: calc(~"50% - 250px");
+    left: calc(~"50%");
     h1 {
       width:628px;
       height:107px;
@@ -59,6 +61,7 @@
       float: left;
       margin-left: 220px;
       width: 325px;
+      cursor: pointer;
       .title{
         margin-left: 20px;
         h2{
@@ -68,7 +71,14 @@
           font-weight:600;
           color:rgba(74,74,74,1);
           line-height:33px;
+          transition: all 0.2s;
         }
+      }
+    }
+    .item:hover {
+      h2 {
+        color:rgba(24,240,126,1);   
+        transition: all 0.2s;
       }
     }
   }
@@ -92,6 +102,7 @@
         padding: 0 6px 17px 12px;
         margin-bottom: 46px;
         cursor: pointer;
+        transition: all 0.2s;        
         h2 {
           width:96px;
           height:33px;
@@ -102,6 +113,10 @@
           line-height:33px;
         }
         
+      }
+      li:hover {
+        border-bottom: 6px solid rgba(0,146,69,1);
+        transition: all 0.2s;        
       }
       .current {
         border-bottom: 6px solid rgba(0,146,69,1);

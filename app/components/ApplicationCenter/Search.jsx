@@ -1,4 +1,5 @@
 import React from "react";
+import IconFont from "../../components/Iconfont";
 import "./index.less";
 const Search = props => {
   return(
@@ -6,6 +7,7 @@ const Search = props => {
       <div className="application-w clearfix">
         <div className="container">
           <input placeholder="搜索应用" type="text"/>
+          <IconFont icon="search" className="search-icon"></IconFont>
         </div>
       </div>
     </div>

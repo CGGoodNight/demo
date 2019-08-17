@@ -6,6 +6,8 @@
     top: 255px;
     right: 305px;
     padding: 0 75px;
+    top: calc(~"50% - 255px");
+    left: calc(~"50%");
     .login-label{
         width:121px;
         height:33px;
@@ -46,7 +48,7 @@
     .login-btn{
         width:486px;
         height:60px;
-        background:rgba(55,170,109,1);
+        background: #37aa6d;
         border-radius:3px;
         font-size:18px;
         font-family:PingFangSC-Semibold;
@@ -56,6 +58,9 @@
         text-align: center;
         margin-top: 64px;
         cursor: pointer;
+    }
+    .login-btn:hover {
+        background: #298453;
     }
     .password-wraper{
         height: 40px;
@@ -68,6 +73,9 @@
         span{
             margin-left: 36px;
             cursor: pointer;
+        }
+        span:hover {
+            color: rgba(55,170,109,1);
         }
     }
 }
