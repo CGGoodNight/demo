@@ -5,11 +5,13 @@ import "./index.less";
 const MenuItem = props => {
 
   return (
-    <div className={props.isActive ? "control-menu-item current" : "control-menu-item"}>
+    <div 
+      onClick={() => props.onMenuItemHandleClick(props.item.key)} 
+      className={props.isActive ? "control-menu-item current" : "control-menu-item"}>
       <div className="icon-box">
-        <IconFont icon={props.item.icon} className = {props.isActive ? "menu-icon current-icon" : "menu-icon"}></IconFont>
+        <IconFont icon={props.item.icon} className = "menu-icon"></IconFont>
       </div>
-      <h2>{props.item.content}</h2>
+      <div className='content'>{props.item.content}</div>
     </div>
   )
 };

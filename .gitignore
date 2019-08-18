@@ -6,6 +6,7 @@ bower_components
 build/
 npm-debug.log
 dist/
+fe-pbap
 
 # IDE ignore
 .idea

@@ -13,7 +13,7 @@ const Menu = props => {
         props.menuArr.length > 0 ? 
           props.menuArr.map((item, index) => {
             return(
-              <MenuItem key={index} isActive={props.currentMenu === item.key ? true:false} item={item} />              
+              <MenuItem onMenuItemHandleClick={props.onMenuItemHandleClick} key={index} isActive={props.currentMenu === item.key ? true:false} item={item} />              
             )
           })
         : ""

@@ -17,7 +17,7 @@ module.exports = {
     vendor: ['react', 'react-dom', 'react-router', 'redux', 'react-redux']
   },
   output: {
-    path: path.join(__dirname, '/fe-eagles-management'),
+    path: path.join(__dirname, '/fe-pbap'),
     filename: '[name].js'
   },
   resolve: {
