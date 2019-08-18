@@ -1,8 +1,14 @@
 .control {
     display: flex;
+    .control-right {
+        width: 100%;
+        background-color: #eee;
+    }
 }
+
 .control-menu {
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     width: 260px;
     background-color: #141C39;
     overflow: hidden;
@@ -13,13 +19,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 8px 0 7px 0;
         img {
             width: 45px;
             height: 45px;
         }
         p {
-            width:151px;
             height:29px;
             font-size:16px;
             font-family:PingFangSC-Semibold;
@@ -45,11 +49,8 @@
                 display: inline-block;
                 color: #fff;
             }
-            .current-icon {
-                color: #009245;
-            }
         }
-        h2 {
+        .content {
             height:21px;
             font-size:14px;
             font-family:PingFangSC-Regular;
@@ -59,11 +60,157 @@
             margin-left: 8px;
         }
     }
+    .control-menu-item:hover {
+        background-color: #F9F9FB;
+        border-left: 4px solid #009245;
+        .icon-box {
+            .menu-icon {
+                color: #009245;
+            }
+        }
+        .content {
+            color: #009245;
+        }
+    }
     .current {
         background-color: #F9F9FB;
         border-left: 4px solid #009245;
-        h2 {
+        .icon-box {
+            .menu-icon {
+                color: #009245;
+            }
+        }
+        .content {
             color: #009245;
         }
     }
 }
+
+.control-header {
+    min-width: 500px;
+    height: 60px;
+    width: 100%;
+    background:rgba(255,255,255,1);
+    box-shadow:-2px 2px 7px 0px rgba(173,161,161,0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .title {
+        p {
+            height:22px;
+            font-size:16px;
+            font-family:PingFangSC;
+            font-weight:500;
+            color:rgba(0,146,69,1);
+            line-height:22px;
+        }
+    }
+    .message {
+        margin: 0 39px 0 53px;
+        .message-icon {
+            width: 28px;
+            height: 28px;
+            font-size: 22px;
+        }
+    }
+    .user {
+        display: flex;
+        align-items: center;
+        .avatar {
+            width:26px;
+            height:26px;
+            background:rgba(216,216,216,1);
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p {
+            height:22px;
+            font-size:16px;
+            font-family:PingFangSC;
+            font-weight:400;
+            color:rgba(74,74,74,1);
+            line-height:22px;
+            margin: 0 56px 0 8px;
+        }
+    }
+}
+.time-choice {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 162px 19px 0;
+}
+        
+.panel-container {
+    display: flex;
+    margin-left: 90px;
+    flex-wrap: wrap;
+    .panel {
+        width:175px;
+        height:190px;
+        background:rgba(255,255,255,1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 52px;
+        margin-bottom: 52px;
+        .icon-logo {
+            font-size: 52px;
+        }
+        .title {
+            height:22px;
+            font-size:16px;
+            font-family:PingFangSC;
+            font-weight:600;
+            color:rgba(74,74,74,1);
+            line-height:22px;
+        }
+        .title-button {
+            height:29px;
+            border-radius:8px;
+            border:1px solid rgba(0,146,69,1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            span {
+                font-size:16px;
+                font-family:PingFangSC;
+                font-weight:600;
+                color:rgba(0,146,69,1);
+                padding: 4px 21px;
+            }
+            &:hover{
+                background-color: #009245;
+                border: 1px solid #009245;
+                transition: all 0.2s;
+                span {
+                    color: #ffffff;
+                }
+            }
+        }
+        .time {
+            height:17px;
+            font-size:12px;
+            font-family:PingFangSC;
+            font-weight:600;
+            margin-top: 4px;
+            color:rgba(155,155,155,1);
+            line-height:17px;
+        }
+        .count {
+            height:42px;
+            font-size:30px;
+            font-family:PingFangSC;
+            font-weight:600;
+            color:rgba(74,74,74,1);
+            line-height:42px;
+        }
+    }
+}
+

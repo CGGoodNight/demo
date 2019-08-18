@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Menu from "../../components/Control/Menu";
-
-import homeicon from "../../../static/image/png/homeicon.png";
+import ControlHeader from "../../components/Control/ControlHeader";
+import TimeChoice from "../../components/Control/TimeChoice";
+import Panel from "../../components/Control/Panel";
 
 const menuArr = [{
   key: 'home',
@@ -10,43 +11,79 @@ const menuArr = [{
 },
 {
   key: 'status',
-  icon: 'home2',
+  icon: 'status',
   content: "状态监控"
 },
 {
   key: 'pannedTask',
-  icon: 'home2',
+  icon: 'pannedTask',
   content: "计划任务管理"
 },
 {
   key: 'resource',
-  icon: 'home2',
+  icon: 'resource',
   content: "资源调度"
 },
 {
   key: 'userPrivilege',
-  icon: 'home2',
+  icon: 'userPrivilege',
   content: "用户与权限管理"
 },
 {
   key: 'enterpriseMicroapplications',
-  icon: 'home2',
+  icon: 'enterpriseMicroapplications',
   content: "企业微应用管理"
 },
 {
   key: 'operationalLog',
-  icon: 'home2',
+  icon: 'operationalLog',
   content: "操作日志查询"
 },
 {
   key: 'authorizedLicense',
-  icon: 'home2',
+  icon: 'authorizedLicense',
   content: "授权许可查询"
 },
 {
   key: 'systemManagement',
-  icon: 'home2',
+  icon: 'systemManagement',
   content: "系统管理"
+},
+];
+
+const panelArr = [{
+  icon: "approvel",
+  title: "待审批",
+  count: 0,
+  isbutton: true
+},
+{
+  icon: "user",
+  title: "用户总数",
+  count: 0
+},
+{
+  icon: "littleservice",
+  title: "微服务总数",
+  count: 0
+},
+{
+  icon: "datasize",
+  title: "处理数据条数",
+  time: "近一周",
+  count: 0
+},
+{
+  icon: "startcount",
+  title: "应用启动次数",
+  time: "近一周",
+  count: 0
+},
+{
+  icon: "appperson",
+  title: "应用使用人数",
+  time: "近一周",
+  count: 0
 },
 ]
 
@@ -57,14 +94,29 @@ class Control extends Component {
       currentMenu: 'home'
     }
   }
+  onMenuItemHandleClick = (key) => {
+    this.setState({
+      currentMenu: key
+    })
+  }
   render() {
     return (
       <div className="control">
         <div>
-          <Menu currentMenu={this.state.currentMenu} menuArr = {menuArr} />
+          <Menu onMenuItemHandleClick={this.onMenuItemHandleClick} currentMenu={this.state.currentMenu} menuArr = {menuArr} />
         </div>
-        <div>
-          Right
+        <div className="control-right">
+          <ControlHeader />
+          <TimeChoice />
+          <div className="panel-container">
+            {
+              panelArr.map((item, index) => {
+                return (
+                  <Panel key = {index} titleIsButton={item.isbutton ? true : false} item = {item} isHasTime={item.time ? true : false}></Panel>
+                )
+              })
+            }
+          </div>
         </div>
       </div>
     );

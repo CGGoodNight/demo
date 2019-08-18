@@ -6,9 +6,12 @@ const Banner = props => {
     <div className="homepage-banner">
       <img src={props.bannerBackground} alt=""/>
       <div className="banner-title">
-        <h1>{props.bannerTitle.title}</h1>
-        <p>{props.bannerTitle.subTitle}</p>
-        <p>{props.bannerTitle.subTitle2}</p>
+
+        <div className="container">
+          <h1>{props.bannerTitle.title}</h1>
+          <p>{props.bannerTitle.subTitle}</p>
+          <p>{props.bannerTitle.subTitle2}</p>
+        </div>
       </div>
     </div>
   )
