@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from "../../components/Common/Header";
 import Banner from "../../components/Homepage/Banner";
 import LoginBox from "../../components/Login/LoginBox";
-import bannerImg from "../../../static/image/png/电网登陆页.png";
+import bannerImg from "../../../static/image/png/loginBanner.png";
 import "./index.less";
 
 class Login extends Component {

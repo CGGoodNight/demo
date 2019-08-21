@@ -5,6 +5,7 @@ import Homepage from '../containers/Homepage';
 import ApplicationCenter from '../containers/ApplictionCenter';
 import Login from "../containers/Login";
 import Control from "../containers/Control";
+// import Dragger from "../containers/Dragger";
 
 class RouteMap extends Component {
   render() {

@@ -1,5 +1,5 @@
 import React from "react";
-import xietong from "../../../static/image/png/xietong copy.png";
+import xietong from "../../../static/image/png/xietong.png";
 import "./AppItem.less";
 const AppItem = props => {
   

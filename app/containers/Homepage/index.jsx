@@ -3,27 +3,27 @@ import Header from "../../components/Common/Header";
 import Banner from "../../components/Homepage/Banner";
 import Introduce from "../../components/Homepage/Introduce";
 import AppRecommend from "../../components/Homepage/AppRecommend";
-import bannerImg from "../../../static/image/png/banner电网.png";
+import bannerImg from "../../../static/image/png/homeBanner.png";
 import app from "../../../static/image/png/app@2x.png";
 import manage from "../../../static/image/png/manage@2x.png";
 import basic from "../../../static/image/png/basic@2x.png";
 import open from "../../../static/image/png/open@2x.png";
 import {reactScrollBar} from "react-scrollbar";
 
-import xietong from "../../../static/image/png/xietong copy.png";
+import xietong from "../../../static/image/png/xietong.png";
 
-import shortCircuitAnalysis from "../../../static/image/png/分组 14.png";
-import dataInfo from "../../../static/image/png/分组 15.png";
-import highPress from "../../../static/image/png/分组 16.png";
+import shortCircuitAnalysis from "../../../static/image/png/shortCircuitAnalysis.png";
+import dataInfo from "../../../static/image/png/dataInfo.png";
+import highPress from "../../../static/image/png/highPress.png";
 
 
-import electricinfo from "../../../static/image/png/分组 10.png";
-import accountinfo from "../../../static/image/png/分组 11.png";
-import electric from "../../../static/image/png/分组 8.png";
-import business from "../../../static/image/png/分组 7.png";
-import fault from "../../../static/image/png/分组 12.png";
-import auxiliary from "../../../static/image/png/分组 13.png";
-import stopElectric from "../../../static/image/png/分组 17.png";
+import electricinfo from "../../../static/image/png/electricinfo.png";
+import accountinfo from "../../../static/image/png/accountinfo.png";
+import electric from "../../../static/image/png/electric.png";
+import business from "../../../static/image/png/business.png";
+import fault from "../../../static/image/png/fault.png";
+import auxiliary from "../../../static/image/png/auxiliary.png";
+import stopElectric from "../../../static/image/png/stopElectric.png";
 
 
 

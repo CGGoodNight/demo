@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.less";
-import classifyIcon from "../../../static/image/png/形状(2).png";
+import classifyIcon from "../../../static/image/png/classify.png";
 const AppTitle = props => {
   return(
     <div className="app-center-title">
