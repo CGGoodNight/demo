@@ -5,6 +5,10 @@ import TimeChoice from "../../components/Control/TimeChoice";
 import Panel from "../../components/Control/Panel";
 import ReactEcharts from 'echarts-for-react';
 
+function sumArr(arr){
+  return eval(arr.join('+'))
+}
+
 const menuArr = [{
   key: 'home',
   icon: 'home2',
@@ -52,7 +56,7 @@ const menuArr = [{
 },
 ];
 
-const panelArr = [{
+let panelArr = [{
   icon: "approvel",
   title: "待审批",
   count: 0,
@@ -153,6 +157,21 @@ class Control extends Component {
     
   }
   render() {
+    const processingDataCount = sumArr(option.series[0].data);
+    const appStartCount = sumArr(option.series[1].data);
+    const userUseCount = sumArr(option.series[2].data);
+    panelArr = panelArr.map((item) => {
+      if(item.icon === "datasize") {
+        item.count = processingDataCount;
+      }
+      if(item.icon === "startcount") {
+        item.count = appStartCount;
+      }
+      if(item.icon === "appperson") {
+        item.count = userUseCount;
+      }
+      return item;
+    })
     return (
       <div className="control">
         <div>

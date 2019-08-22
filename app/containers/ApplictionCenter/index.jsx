@@ -97,44 +97,43 @@ const bannerTitle = {
 }
 
 class ApplicationCenter extends Component {
-  componentDidMount() {
-    var o,   //捕获到的事件
-          X,  //box水平宽度
-          Y;  //box垂直高度
-    function getObject(obj,e){    //获取捕获到的对象
-      console.dir(obj);
-        o = obj;
-        // document.all（IE）使用setCapture方法绑定；其余比如FF使用Window对象针对事件的捕捉
-        document.all ? o.setCapture() : window.captureEvents(Event.MOUSEMOVE);  
-        debugger
-        X = parseInt(obj.clientWidth) - (e.clientX - parseInt(o.style.right));   //获取宽度，
-        Y = parseInt(obj.clientHeight) - (e.clientY - parseInt(o.style.bottom));   //获取高度，
-        console.log(X, Y);
-    //    alert(e.clientX+"  -- " + o.style.left+" -- "+ X);
-    }
-    document.getElementById("rabot").onmousedown = function(e){ 
-        getObject(this,e||event);       //box捕获事件并处理  e-->FF  window.event-->IE
-    };
-    document.onmousemove = function(dis){    //鼠标移动事件处理
-        if(!o){    //如果未获取到相应对象则返回
-            return;
-        }
-        if(!dis){  //事件
-            dis = event ;
-        //    dis = arguments[0]||window.event;   //如果上面那句在FF下无法获取事件，听说可以通过 arguments[0]获取FF下的事件对象
-        }
-        o.style.left = dis.clientX - X +"px";     //设定box样式随鼠标移动而改变
-        o.style.top = dis.clientY - Y + "px";
-    };
-    document.onmouseup = function(){    //鼠标松开事件处理
-        if(!o){   //如果未获取到相应对象则返回
-            return;
-        }
-        // document.all（IE）使用releaseCapture解除绑定；其余比如FF使用window对象针对事件的捕捉
-        document.all ? o.releaseCapture() : window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP)
-        o = '';   //还空对象
-    };
-  }
+  // componentDidMount() {
+  //   var o,   //捕获到的事件
+  //         X,  //box水平宽度
+  //         Y;  //box垂直高度
+  //   function getObject(obj,e){    //获取捕获到的对象
+  //     console.dir(obj);
+  //       o = obj;
+  //       // document.all（IE）使用setCapture方法绑定；其余比如FF使用Window对象针对事件的捕捉
+  //       document.all ? o.setCapture() : window.captureEvents(Event.MOUSEMOVE);  
+  //       X = (e.clientX - parseInt(o.style.left));   //获取宽度，
+  //       Y = (e.clientY - parseInt(o.style.top));   //获取高度，
+  //       console.log(X, Y);
+  //   //    alert(e.clientX+"  -- " + o.style.left+" -- "+ X);
+  //   }
+  //   document.getElementById("rabot").onmousedown = function(e){ 
+  //       getObject(this,e||event);       //box捕获事件并处理  e-->FF  window.event-->IE
+  //   };
+  //   document.onmousemove = function(dis){    //鼠标移动事件处理
+  //       if(!o){    //如果未获取到相应对象则返回
+  //           return;
+  //       }
+  //       if(!dis){  //事件
+  //           dis = event ;
+  //       //    dis = arguments[0]||window.event;   //如果上面那句在FF下无法获取事件，听说可以通过 arguments[0]获取FF下的事件对象
+  //       }
+  //       o.style.left = dis.clientX - X +"px";     //设定box样式随鼠标移动而改变
+  //       o.style.top = dis.clientY - Y + "px";
+  //   };
+  //   document.onmouseup = function(){    //鼠标松开事件处理
+  //       if(!o){   //如果未获取到相应对象则返回
+  //           return;
+  //       }
+  //       // document.all（IE）使用releaseCapture解除绑定；其余比如FF使用window对象针对事件的捕捉
+  //       document.all ? o.releaseCapture() : window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP)
+  //       o = '';   //还空对象
+  //   };
+  // }
   render() {
     return (
       <div>
