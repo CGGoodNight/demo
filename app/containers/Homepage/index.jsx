@@ -4,11 +4,15 @@ import Banner from "../../components/Homepage/Banner";
 import Introduce from "../../components/Homepage/Introduce";
 import AppRecommend from "../../components/Homepage/AppRecommend";
 import bannerImg from "../../../static/image/png/homeBanner.png";
-import app from "../../../static/image/png/app@2x.png";
+import manage1 from "../../../static/image/png/manage1@2x.png";
 import manage from "../../../static/image/png/manage@2x.png";
+import basic1 from "../../../static/image/png/basic1@2x.png";
 import basic from "../../../static/image/png/basic@2x.png";
+import open1 from "../../../static/image/png/open1@2x.png";
 import open from "../../../static/image/png/open@2x.png";
-import {reactScrollBar} from "react-scrollbar";
+import app1 from "../../../static/image/png/app1@2x.png";
+import app from "../../../static/image/png/app@2x.png";
+import { reactScrollBar } from "react-scrollbar";
 
 import xietong from "../../../static/image/png/xietong.png";
 
@@ -29,22 +33,22 @@ import stopElectric from "../../../static/image/png/stopElectric.png";
 
 const introduceAppArr = [
   {
-    image: app,
+    image: "app",
     title: "泛在微应用",
     subTitle: "微应用管理中心，海量微应用下载"
   },
   {
-    image: manage,
+    image: "manage",
     title: "微应用信息化管理",
     subTitle: "微应用信息清爽透明，通知计划一目了然"
   },
   {
-    image: basic,
+    image: "basic",
     title: "基础应用",
     subTitle: "微应用管理中心，海量微应用下载"
   },
   {
-    image: open,
+    image: "open",
     title: "开放能力",
     subTitle: "微应用信息清爽透明，通知计划一目了然"
   }
@@ -84,17 +88,17 @@ const appRecommendArr3 = [{
   image: business,
   title: "非抢业务自动催办"
 }
-,
+  ,
 {
   image: fault,
   title: "跳闸接地故障告警"
 }
-,
+  ,
 {
   image: auxiliary,
   title: "配网负荷辅助决策"
 }
-,
+  ,
 {
   image: stopElectric,
   title: "停电计划综合管理"
@@ -120,14 +124,14 @@ class Homepage extends Component {
   }
   render() {
     let appRecommendArr = [];
-    this.state.index === 1 ? appRecommendArr=appRecommendArr1 : this.state.index === 2 ? appRecommendArr=appRecommendArr2 : appRecommendArr=appRecommendArr3
+    this.state.index === 1 ? appRecommendArr = appRecommendArr1 : this.state.index === 2 ? appRecommendArr = appRecommendArr2 : appRecommendArr = appRecommendArr3
     return (
       <div >
         <reactScrollBar minScrollSize={"300px"}>
           <Header headerIndex={1} />
           <Banner bannerBackground={bannerImg} bannerTitle={bannerTitle} />
           <Introduce introduceAppArr={introduceAppArr} />
-          <AppRecommend changeAppRecommendPage={this.changeAppRecommendPage} appRecommendArr = {appRecommendArr} index={this.state.index} />
+          <AppRecommend changeAppRecommendPage={this.changeAppRecommendPage} appRecommendArr={appRecommendArr} index={this.state.index} />
         </reactScrollBar>
       </div>
     );

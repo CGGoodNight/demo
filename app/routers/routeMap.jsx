@@ -15,6 +15,7 @@ class RouteMap extends Component {
         <Route path="/appcenter" component = {ApplicationCenter}></Route>
         <Route path="/login" component={Login}></Route>
         <Route path="/control" component={Control}></Route>
+        {/* <Route path="/drag" component={Dragger}></Route> */}
       </Router>
     );
   }
