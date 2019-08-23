@@ -144,7 +144,7 @@ class ApplicationCenter extends Component {
         <AppClassify appRecommendArr1 = {appRecommendArr2} isNeedTtile={false}/>
         <AppClassify appRecommendArr1 = {appRecommendArr3} isNeedTtile={false}/>
         <AppClassify appRecommendArr1 = {appRecommendArr4} isNeedTtile={true} appRecommendTitle={"基础应用"}/>
-        <div style={{position: "fixed", bottom: 100, right: 100}} id="rabot" className="rabot">
+        <div id="rabot" className="rabot">
         </div>
       </div>
     );

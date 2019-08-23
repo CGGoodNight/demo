@@ -4,15 +4,6 @@ import Banner from "../../components/Homepage/Banner";
 import Introduce from "../../components/Homepage/Introduce";
 import AppRecommend from "../../components/Homepage/AppRecommend";
 import bannerImg from "../../../static/image/png/homeBanner.png";
-import manage1 from "../../../static/image/png/manage1@2x.png";
-import manage from "../../../static/image/png/manage@2x.png";
-import basic1 from "../../../static/image/png/basic1@2x.png";
-import basic from "../../../static/image/png/basic@2x.png";
-import open1 from "../../../static/image/png/open1@2x.png";
-import open from "../../../static/image/png/open@2x.png";
-import app1 from "../../../static/image/png/app1@2x.png";
-import app from "../../../static/image/png/app@2x.png";
-import { reactScrollBar } from "react-scrollbar";
 
 import xietong from "../../../static/image/png/xietong.png";
 
@@ -127,12 +118,14 @@ class Homepage extends Component {
     this.state.index === 1 ? appRecommendArr = appRecommendArr1 : this.state.index === 2 ? appRecommendArr = appRecommendArr2 : appRecommendArr = appRecommendArr3
     return (
       <div >
-        <reactScrollBar minScrollSize={"300px"}>
-          <Header headerIndex={1} />
-          <Banner bannerBackground={bannerImg} bannerTitle={bannerTitle} />
-          <Introduce introduceAppArr={introduceAppArr} />
-          <AppRecommend changeAppRecommendPage={this.changeAppRecommendPage} appRecommendArr={appRecommendArr} index={this.state.index} />
-        </reactScrollBar>
+
+        <Header headerIndex={1} />
+        <Banner bannerBackground={bannerImg} bannerTitle={bannerTitle} />
+        <Introduce introduceAppArr={introduceAppArr} />
+        <AppRecommend changeAppRecommendPage={this.changeAppRecommendPage} appRecommendArr={appRecommendArr} index={this.state.index} />
+
+        <div id="rabot" className="rabot">
+        </div>
       </div>
     );
   }

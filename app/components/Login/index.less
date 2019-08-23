@@ -4,12 +4,9 @@
     background-color: #fff;
     position: absolute;
     top: 255px;
-    right: 305px;
+    right: 11%;
     padding: 0 75px;
-    top: calc(~"50% - 255px");
-    left: calc(~"50%");
     .login-label{
-        width:121px;
         height:33px;
         font-size:24px;
         font-family:PingFangSC-Semibold;
@@ -20,7 +17,6 @@
     }
     .input-div{
         margin-top: 35px;
-        width:486px;
         height:69px;
         background:rgba(244,244,246,1);
         border:1px solid rgba(237,237,237,1);
@@ -46,7 +42,6 @@
         }
     }
     .login-btn{
-        width:486px;
         height:60px;
         background: #37aa6d;
         border-radius:3px;
@@ -77,5 +72,21 @@
         span:hover {
             color: rgba(55,170,109,1);
         }
+    }
+}
+@media screen and (max-width :1620px){
+    .login {
+        width: 519px;
+        height: 475px;
+        top: 160px;
+        right: 0;
+    }
+}
+@media screen and (max-width :1386px){
+    .login {
+        width: 480px;
+        height: 450px;
+        top: 160px;
+        right: 0;
     }
 }

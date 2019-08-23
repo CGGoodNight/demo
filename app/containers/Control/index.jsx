@@ -183,12 +183,10 @@ class Control extends Component {
 
         <Layout>
           <Sider width="260px">
-            <div>
-              <Menu onMenuItemHandleClick={this.onMenuItemHandleClick} currentMenu={this.state.currentMenu} menuArr={menuArr} />
-            </div>
+            <Menu onMenuItemHandleClick={this.onMenuItemHandleClick} currentMenu={this.state.currentMenu} menuArr={menuArr} />
           </Sider>
           <Layout>
-            <Header style={{ color: "#bbbb" }}>
+            <Header style={{ color: "#bbbb", height: 60 }}>
               <ControlHeader />
             </Header>
             <Content style={{ color: "#f10215" }}>
@@ -205,6 +203,24 @@ class Control extends Component {
                 </div>
                 <div className="divider"></div>
                 <TimeChoice />
+                <ReactEcharts
+                  option={option}
+                  notMerge={true}
+                  lazyUpdate={true}
+                  className="echarts"
+                />
+                <ReactEcharts
+                  option={option}
+                  notMerge={true}
+                  lazyUpdate={true}
+                  className="echarts"
+                />
+                <ReactEcharts
+                  option={option}
+                  notMerge={true}
+                  lazyUpdate={true}
+                  className="echarts"
+                />
                 <ReactEcharts
                   option={option}
                   notMerge={true}

@@ -7,17 +7,9 @@
   "plugins": [
     [
       "import",
-      {
-        "libraryName": "antd",
-        "style": true
-      }
-    ],
-    [
-      "import",
-      {
-        "libraryName": "antd-mobile",
-        "style": "css"
-      }
+      [
+        { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }
+      ]
     ],
     [
       "transform-runtime",

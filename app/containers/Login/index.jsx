@@ -11,8 +11,9 @@ class Login extends Component {
       <div className="login-root">
         <div className="login-background"></div>
         <Header headerIndex={5} />
-        {/* <Banner bannerBackground={bannerImg} /> */}
-        <LoginBox />
+        <div className="login-w">
+          <LoginBox />
+        </div>
       </div>
     );
   }
